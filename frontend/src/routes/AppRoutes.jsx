@@ -5,8 +5,8 @@ import MainLayout from "../Layout/MainLayout";
 import Hero from "../Components/Hero";
 
 import Brands from "../Pages/Brands";
-import Login from "../Pages/login";
-import Signup from "../Pages/signup";
+import Login from "../Pages/Login";
+import Signup from "../Pages/Signup";
 import Features from "../Pages/Features";
 import Pricingpage from "../Pages/Pricingpage";
 import Template from "../Pages/Template";
