@@ -1,0 +1,610 @@
+@import "tailwindcss";
+
+
+
+
+
+
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+box-sizing: border-box;
+
+}
+
+/* Infinite Vertical Scroll */
+@keyframes scroll {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+.animate-scroll{
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+
+  animation:scroll 22s linear infinite;
+}
+
+.animate-scroll:hover{
+  animation-play-state:paused;
+}
+
+
+
+@keyframes fadeLogo {
+
+  0%{
+    opacity:.3;
+    transform:translateY(10px);
+  }
+
+  50%{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+  100%{
+    opacity:.3;
+    transform:translateY(10px);
+  }
+
+}
+
+.logo{
+
+  animation:fadeLogo 4s infinite ease-in-out;
+
+}
+
+.logo:nth-child(2){
+    animation-delay:.4s;
+}
+
+.logo:nth-child(3){
+    animation-delay:.8s;
+}
+
+.logo:nth-child(4){
+    animation-delay:1.2s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hero-animate {
+  animation: heroFadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-fade {
+  animation: heroFade 0.8s ease-out both;
+}
+
+.hero-slide-left {
+  animation: heroSlideLeft 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-slide-right {
+  animation: heroSlideRight 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-scale {
+  animation: heroScale 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+
+/* ---------------------------------------------------------
+   ANIMATION DELAYS
+   --------------------------------------------------------- */
+
+.hero-delay-1 {
+  animation-delay: 0.1s;
+}
+
+.hero-delay-2 {
+  animation-delay: 0.2s;
+}
+
+.hero-delay-3 {
+  animation-delay: 0.3s;
+}
+
+.hero-delay-4 {
+  animation-delay: 0.4s;
+}
+
+.hero-delay-5 {
+  animation-delay: 0.5s;
+}
+
+.hero-delay-6 {
+  animation-delay: 0.6s;
+}
+
+.hero-delay-7 {
+  animation-delay: 0.7s;
+}
+
+.hero-delay-8 {
+  animation-delay: 0.8s;
+}
+
+.hero-delay-9 {
+  animation-delay: 0.9s;
+}
+
+.hero-delay-10 {
+  animation-delay: 1s;
+}
+
+
+/* ---------------------------------------------------------
+   FADE UP
+   --------------------------------------------------------- */
+
+@keyframes heroFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(45px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ---------------------------------------------------------
+   FADE
+   --------------------------------------------------------- */
+
+@keyframes heroFade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* ---------------------------------------------------------
+   SLIDE LEFT
+   --------------------------------------------------------- */
+
+@keyframes heroSlideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-70px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* ---------------------------------------------------------
+   SLIDE RIGHT
+   --------------------------------------------------------- */
+
+@keyframes heroSlideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(70px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* ---------------------------------------------------------
+   SCALE
+   --------------------------------------------------------- */
+
+@keyframes heroScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.88);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* =========================================================
+   BUTTON ANIMATION
+   ========================================================= */
+
+.hero-button {
+  position: relative;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.hero-button:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow:
+    0 15px 40px rgba(124, 58, 237, 0.35);
+}
+
+.hero-button:active {
+  transform: translateY(-1px) scale(0.97);
+}
+
+
+/* =========================================================
+   CARD ANIMATION
+   ========================================================= */
+
+.hero-card {
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.45s ease,
+    border-color 0.45s ease;
+}
+
+.hero-card:hover {
+  transform: translateY(-8px) scale(1.02);
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.35),
+    0 0 40px rgba(124, 58, 237, 0.15);
+}
+
+
+/* =========================================================
+   FLOATING BACKGROUND
+   ========================================================= */
+
+.hero-float {
+  animation:
+    heroFloat 8s ease-in-out infinite;
+}
+
+.hero-float-slow {
+  animation:
+    heroFloat 12s ease-in-out infinite;
+}
+
+.hero-float-fast {
+  animation:
+    heroFloat 6s ease-in-out infinite;
+}
+
+
+@keyframes heroFloat {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -25px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+/* =========================================================
+   GRADIENT TEXT
+   ========================================================= */
+
+.hero-gradient-text {
+  background-size: 200% auto;
+
+  animation:
+    heroGradient 5s linear infinite;
+}
+
+
+@keyframes heroGradient {
+  0% {
+    background-position: 0% center;
+  }
+
+  50% {
+    background-position: 100% center;
+  }
+
+  100% {
+    background-position: 0% center;
+  }
+}
+
+
+/* =========================================================
+   SOCIAL MEDIA LOGOS
+   ========================================================= */
+
+.hero-social {
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease;
+}
+
+.hero-social:hover {
+  transform:
+    translateY(-8px)
+    scale(1.08);
+
+  box-shadow:
+    0 15px 35px rgba(124, 58, 237, 0.25);
+}
+
+
+/* =========================================================
+   IMAGE / DASHBOARD
+   ========================================================= */
+
+.hero-dashboard {
+  transition:
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.5s ease;
+}
+
+.hero-dashboard:hover {
+  transform:
+    translateY(-10px)
+    scale(1.02);
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.4),
+    0 0 50px rgba(139, 92, 246, 0.15);
+}
+
+
+/* =========================================================
+   GLOW PULSE
+   ========================================================= */
+
+.hero-glow {
+  animation:
+    heroGlow 4s ease-in-out infinite;
+}
+
+@keyframes heroGlow {
+  0% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.65;
+    transform: scale(1.08);
+  }
+
+  100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+}
+
+
+/* =========================================================
+   SHIMMER
+   ========================================================= */
+
+.hero-shimmer {
+  background-size: 200% 100%;
+
+  animation:
+    heroShimmer 3s linear infinite;
+}
+
+@keyframes heroShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+
+/* =========================================================
+   STATS
+   ========================================================= */
+
+.hero-stat {
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.hero-stat:hover {
+  transform: translateY(-6px);
+}
+
+
+/* =========================================================
+   ICON HOVER
+   ========================================================= */
+
+.hero-icon {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.hero-icon:hover {
+  transform:
+    rotate(-5deg)
+    scale(1.1);
+
+  box-shadow:
+    0 10px 30px rgba(124, 58, 237, 0.25);
+}
+
+
+/* =========================================================
+   BADGE
+   ========================================================= */
+
+.hero-badge {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.hero-badge:hover {
+  transform: translateY(-3px) scale(1.03);
+
+  box-shadow:
+    0 10px 35px rgba(34, 211, 238, 0.12);
+}
+
+
+/* =========================================================
+   LINK HOVER
+   ========================================================= */
+
+.hero-link {
+  position: relative;
+  transition:
+    color 0.3s ease;
+}
+
+.hero-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -4px;
+
+  width: 0;
+  height: 2px;
+
+  border-radius: 999px;
+
+  background: currentColor;
+
+  transition:
+    width 0.3s ease;
+}
+
+.hero-link:hover::after {
+  width: 100%;
+}
+
+
+/* =========================================================
+   STAGGER HELPERS
+   ========================================================= */
+
+.hero-stagger-1 {
+  animation-delay: 0.1s;
+}
+
+.hero-stagger-2 {
+  animation-delay: 0.2s;
+}
+
+.hero-stagger-3 {
+  animation-delay: 0.3s;
+}
+
+.hero-stagger-4 {
+  animation-delay: 0.4s;
+}
+
+.hero-stagger-5 {
+  animation-delay: 0.5s;
+}
+
+.hero-stagger-6 {
+  animation-delay: 0.6s;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .hero-slide-left,
+  .hero-slide-right {
+    animation-name: heroFadeUp;
+  }
+
+  .hero-card:hover,
+  .hero-dashboard:hover {
+    transform: translateY(-4px) scale(1.01);
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-animate,
+  .hero-fade,
+  .hero-slide-left,
+  .hero-slide-right,
+  .hero-scale,
+  .hero-float,
+  .hero-float-slow,
+  .hero-float-fast,
+  .hero-gradient-text,
+  .hero-glow,
+  .hero-shimmer {
+    animation: none;
+  }
+
+  .hero-button,
+  .hero-card,
+  .hero-social,
+  .hero-dashboard,
+  .hero-stat,
+  .hero-icon,
+  .hero-badge {
+    transition: none;
+  }
+}
+
