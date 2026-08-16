@@ -1,5 +1,5 @@
-import Navbar from "../components/Navbar";
-import IntegrationCard from "../components/IntegrationCard";
+import Navbar from "../Components/Navbar";
+import IntegrationCard from "../Components/IntegrationCard";
 import { integrations } from "../data/integrations";
 import {motion} from "framer-motion";
 
