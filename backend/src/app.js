@@ -45,7 +45,6 @@ app.use("/api/replies", replyRoutes);
 app.use("/api/schedule", scheduleRoutes);
 
 app.use("/api/content", contentRoutes);
-app.use("/api/content", contentRoutes);
 
 // Swagger
 app.use(
